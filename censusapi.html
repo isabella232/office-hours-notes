@@ -11,7 +11,7 @@
 
 
 
-<title>Census API data import</title>
+<title>Action Hub</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -380,18 +380,18 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">RE Demand Model</a>
+      <a class="navbar-brand" href="index.html">Looker Integrations</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="index.html">Embedding</a>
 </li>
 <li>
-  <a href="censusapi.html">Census API</a>
+  <a href="censusapi.html">Action Hub</a>
 </li>
 <li>
-  <a href="regressionAnalysis.html">Regression Analysis</a>
+  <a href="regressionAnalysis.html">Webhooks</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -405,141 +405,56 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Census API data import</h1>
+<h1 class="title toc-ignore">Sending data with Action Hub</h1>
 
 </div>
 
 
-<p><em>Shingai Samudzi (<span class="citation">@samudzi</span>)</em></p>
-<p><em>June 17,2019</em></p>
 <div id="prerequisites" class="section level1">
 <h1>Prerequisites</h1>
 <p>To get started, you will need to install all of the necessary libraries, as well as add the API key to the renvironment</p>
-<pre class="r"><code>library(censusapi)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;censusapi&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:methods&#39;:
-## 
-##     getFunction</code></pre>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>library(data.table)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;data.table&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
-## 
-##     between, first, last</code></pre>
-<pre class="r"><code>#add aws-cli connection
-#source(&quot;awscli_connect.R&quot;)
+  
+<pre class="r"><code>
 
-# Add key to .Renviron
-Sys.setenv(CENSUS_KEY=&quot;5f7e600cffb6db8ddc21129cda45a74ce7447bcc&quot;)
-# Reload .Renviron
-readRenviron(&quot;~/.Renviron&quot;)
-# Check to see that the expected key is output in your R console
-Sys.getenv(&quot;CENSUS_KEY&quot;)</code></pre>
-<pre><code>## [1] &quot;5f7e600cffb6db8ddc21129cda45a74ce7447bcc&quot;</code></pre>
+  dimension_group: latest_order {
+    type: time
+    timeframes: [date, week, month, year]
+    sql: ${TABLE}.latest_order ;;
+  }
+
+</code></pre>
 <p>To see a current table of every available endpoint, run listCensusApis:</p>
-<pre class="r"><code>#apis &lt;- listCensusApis()
-#View(apis)</code></pre>
+
+  
+<pre><code>
+  dimension_group: latest_order {
+    type: time
+    timeframes: [date, week, month, year]
+    sql: ${TABLE}.latest_order ;;
+  }
+</code></pre>
+  
 </div>
 <div id="data-import-and-shaping" class="section level1">
 <h1>Data Import and Shaping</h1>
 <p>We are most interested in the zip code business patterns, so we will focus on that endpoint. Here, we want to be able to get the absolute values from specific years, as well as measure percent changes</p>
-<pre class="r"><code>zbp_2016 &lt;- getCensus(name = &quot;zbp&quot;,
- vintage = 2016,
- vars = c(&quot;GEO_TTL&quot;, &quot;EMPSZES_TTL&quot;, &quot;EMP&quot;, &quot;ESTAB&quot;, &quot;PAYANN&quot;),
- region = &quot;zipcode:*&quot;)
-head(zbp_2016)</code></pre>
+
+  
+   <!--table  -->
+
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["zipcode"],"name":[1],"type":["chr"],"align":["left"]},{"label":["GEO_TTL"],"name":[2],"type":["chr"],"align":["left"]},{"label":["EMPSZES_TTL"],"name":[3],"type":["chr"],"align":["left"]},{"label":["EMP"],"name":[4],"type":["chr"],"align":["left"]},{"label":["ESTAB"],"name":[5],"type":["chr"],"align":["left"]},{"label":["PAYANN"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"00501","2":"ZIP 00501 (Holtsville, NY)","3":"All establishments","4":"0","5":"2","6":"0","_rn_":"1"},{"1":"01001","2":"ZIP 01001 (Agawam, MA)","3":"All establishments","4":"9127","5":"472","6":"376492","_rn_":"2"},{"1":"01002","2":"ZIP 01002 (Amherst, MA)","3":"All establishments","4":"18894","5":"564","6":"472633","_rn_":"3"},{"1":"01007","2":"ZIP 01007 (Belchertown, MA)","3":"All establishments","4":"1989","5":"229","6":"63860","_rn_":"4"},{"1":"01005","2":"ZIP 01005 (Barre, MA)","3":"All establishments","4":"1089","5":"95","6":"34815","_rn_":"5"},{"1":"01003","2":"ZIP 01003 (Amherst, MA)","3":"All establishments","4":"288","5":"21","6":"10461","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<pre class="r"><code>zbp_2013 &lt;- getCensus(name = &quot;zbp&quot;,
- vintage = 2013,
- vars = c(&quot;EMP&quot;, &quot;ESTAB&quot;, &quot;PAYANN&quot;),
- region = &quot;zipcode:*&quot;)
-head(zbp_2013)</code></pre>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["zipcode"],"name":[1],"type":["chr"],"align":["left"]},{"label":["EMP"],"name":[2],"type":["chr"],"align":["left"]},{"label":["ESTAB"],"name":[3],"type":["chr"],"align":["left"]},{"label":["PAYANN"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"01001","2":"9418","3":"439","4":"373116","_rn_":"1"},{"1":"00501","2":"0","3":"2","4":"0","_rn_":"2"},{"1":"01301","2":"7854","3":"563","4":"271182","_rn_":"3"},{"1":"01002","2":"17263","3":"572","4":"398992","_rn_":"4"},{"1":"01005","2":"844","3":"97","4":"27261","_rn_":"5"},{"1":"01004","2":"179","3":"16","4":"5019","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-<pre class="r"><code>zbp_2011 &lt;- getCensus(name = &quot;zbp&quot;,
- vintage = 2011,
- vars = c(&quot;EMP&quot;, &quot;ESTAB&quot;, &quot;PAYANN&quot;),
- region = &quot;zipcode:*&quot;)
-head(zbp_2011)</code></pre>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["zipcode"],"name":[1],"type":["chr"],"align":["left"]},{"label":["EMP"],"name":[2],"type":["chr"],"align":["left"]},{"label":["ESTAB"],"name":[3],"type":["chr"],"align":["left"]},{"label":["PAYANN"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"00501","2":"0","3":"2","4":"0","_rn_":"1"},{"1":"01001","2":"8788","3":"436","4":"322008","_rn_":"2"},{"1":"01002","2":"15878","3":"558","4":"360685","_rn_":"3"},{"1":"01003","2":"198","3":"16","4":"8591","_rn_":"4"},{"1":"01004","2":"0","3":"19","4":"7063","_rn_":"5"},{"1":"01005","2":"751","3":"91","4":"24826","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-<pre class="r"><code>#Check the internal structure of the data that has been returned
-str(zbp_2011)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    39032 obs. of  4 variables:
-##  $ zipcode: chr  &quot;00501&quot; &quot;01001&quot; &quot;01002&quot; &quot;01003&quot; ...
-##  $ EMP    : chr  &quot;0&quot; &quot;8788&quot; &quot;15878&quot; &quot;198&quot; ...
-##  $ ESTAB  : chr  &quot;2&quot; &quot;436&quot; &quot;558&quot; &quot;16&quot; ...
-##  $ PAYANN : chr  &quot;0&quot; &quot;322008&quot; &quot;360685&quot; &quot;8591&quot; ...</code></pre>
-<pre class="r"><code>str(zbp_2013)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    38804 obs. of  4 variables:
-##  $ zipcode: chr  &quot;01001&quot; &quot;00501&quot; &quot;01301&quot; &quot;01002&quot; ...
-##  $ EMP    : chr  &quot;9418&quot; &quot;0&quot; &quot;7854&quot; &quot;17263&quot; ...
-##  $ ESTAB  : chr  &quot;439&quot; &quot;2&quot; &quot;563&quot; &quot;572&quot; ...
-##  $ PAYANN : chr  &quot;373116&quot; &quot;0&quot; &quot;271182&quot; &quot;398992&quot; ...</code></pre>
-<pre class="r"><code>str(zbp_2016)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    38722 obs. of  6 variables:
-##  $ zipcode    : chr  &quot;00501&quot; &quot;01001&quot; &quot;01002&quot; &quot;01007&quot; ...
-##  $ GEO_TTL    : chr  &quot;ZIP 00501 (Holtsville, NY)&quot; &quot;ZIP 01001 (Agawam, MA)&quot; &quot;ZIP 01002 (Amherst, MA)&quot; &quot;ZIP 01007 (Belchertown, MA)&quot; ...
-##  $ EMPSZES_TTL: chr  &quot;All establishments&quot; &quot;All establishments&quot; &quot;All establishments&quot; &quot;All establishments&quot; ...
-##  $ EMP        : chr  &quot;0&quot; &quot;9127&quot; &quot;18894&quot; &quot;1989&quot; ...
-##  $ ESTAB      : chr  &quot;2&quot; &quot;472&quot; &quot;564&quot; &quot;229&quot; ...
-##  $ PAYANN     : chr  &quot;0&quot; &quot;376492&quot; &quot;472633&quot; &quot;63860&quot; ...</code></pre>
-<p>We have our data, now there are two things we need to do. First, using the str() function, we can see that all fields in all three dataframes are char type. We need EMP, ESTAB, and PAYANN fields to be integers instead. Additionally, we need to change each column to signify the year so that we can more easily do transformations in Looker at the data modelling layer.</p>
-<pre class="r"><code>#transforming key fields from character to numeric datatype
+  
+  
+  
 
-zbp_2011a &lt;- mutate_at(zbp_2011, vars(EMP, ESTAB, PAYANN), function(x) as.numeric(as.character(x)))
-zbp_2013a &lt;- mutate_at(zbp_2013, vars(EMP, ESTAB, PAYANN), function(x) as.numeric(as.character(x)))
-zbp_2016a &lt;- mutate_at(zbp_2016, vars(EMP, ESTAB, PAYANN), function(x) as.numeric(as.character(x)))
 
-# check datatypes to confirm change (just doing one for show)
-str(zbp_2016a)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    38722 obs. of  6 variables:
-##  $ zipcode    : chr  &quot;00501&quot; &quot;01001&quot; &quot;01002&quot; &quot;01007&quot; ...
-##  $ GEO_TTL    : chr  &quot;ZIP 00501 (Holtsville, NY)&quot; &quot;ZIP 01001 (Agawam, MA)&quot; &quot;ZIP 01002 (Amherst, MA)&quot; &quot;ZIP 01007 (Belchertown, MA)&quot; ...
-##  $ EMPSZES_TTL: chr  &quot;All establishments&quot; &quot;All establishments&quot; &quot;All establishments&quot; &quot;All establishments&quot; ...
-##  $ EMP        : num  0 9127 18894 1989 1089 ...
-##  $ ESTAB      : num  2 472 564 229 95 21 14 18 21 75 ...
-##  $ PAYANN     : num  0 376492 472633 63860 34815 ...</code></pre>
-<pre class="r"><code># Now we rename columns to prep for join
-
-# Rename a column in R
-setnames(zbp_2011a, old=c(&quot;EMP&quot;,&quot;ESTAB&quot;,&quot;PAYANN&quot;), new=c(&quot;EMP_2011&quot;, &quot;ESTAB_2011&quot;,&quot;PAYANN_2011&quot;))
-setnames(zbp_2013a, old=c(&quot;EMP&quot;,&quot;ESTAB&quot;,&quot;PAYANN&quot;), new=c(&quot;EMP_2013&quot;, &quot;ESTAB_2013&quot;,&quot;PAYANN_2013&quot;))
-setnames(zbp_2016a, old=c(&quot;EMP&quot;,&quot;ESTAB&quot;,&quot;PAYANN&quot;), new=c(&quot;EMP_2016&quot;, &quot;ESTAB_2016&quot;,&quot;PAYANN_2016&quot;))
-
-# Check datatypes again to make sure column transformations occurred correctly
-str(zbp_2011a)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    39032 obs. of  4 variables:
-##  $ zipcode    : chr  &quot;00501&quot; &quot;01001&quot; &quot;01002&quot; &quot;01003&quot; ...
-##  $ EMP_2011   : num  0 8788 15878 198 0 ...
-##  $ ESTAB_2011 : num  2 436 558 16 19 91 217 20 14 79 ...
-##  $ PAYANN_2011: num  0 322008 360685 8591 7063 ...</code></pre>
-<p>Finally, let’s join all of the dataframes into a single giant dataframe, using the zipcode field as the join field. We’ll use a left outer join to make sure that all rows are preserved, and focus actual modeling in Looker</p>
-<pre class="r"><code>#Join 2011 with 2013 data
-df&lt;-merge(x=zbp_2011a,y=zbp_2013a,by=&quot;zipcode&quot;,all=TRUE)
-
-#Join 2016 with rest of data
-df_a&lt;-merge(x=df,y=zbp_2016a,by=&quot;zipcode&quot;,all=TRUE)</code></pre>
+  
+  
+  
 </div>
 <div id="shipping-to-datalakedatawarehouse" class="section level1">
 <h1>Shipping to Datalake/DataWarehouse</h1>
