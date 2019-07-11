@@ -415,9 +415,12 @@ div.tocify {
 
 
 <div id="prerequisites" class="section level1">
-<h1>Prerequisites</h1>
-<p>To get started, you will need to install all of the necessary libraries, as well as add the API key to the renvironment</p>
-  
+<h1>What is Action Hub?</h1>
+  <br>
+<p>By default, Looker allows you to send and schedule data to destinations like email, webhooks, and S3 buckets. The Action Hub lets you send data or trigger actions to a wide range of other web services, like Twilio or Zapier.</p>
+<br>
+  <div class="figure">
+<img src="icons.png" alt="Available Actions" />  
 <pre class="r"><code>
 
   dimension_group: latest_order {
@@ -439,21 +442,12 @@ div.tocify {
 </code></pre>
   
 </div>
+  
 <div id="data-import-and-shaping" class="section level1">
-<h1>Example - Sending Data to Slack</h1>
+<h1>Exercise - Sending Data to Slack</h1>
 <p>We are most interested in the zip code business patterns, so we will focus on that endpoint. Here, we want to be able to get the absolute values from specific years, as well as measure percent changes</p>
 
-  
-   <!--table  -->
-
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["zipcode"],"name":[1],"type":["chr"],"align":["left"]},{"label":["GEO_TTL"],"name":[2],"type":["chr"],"align":["left"]},{"label":["EMPSZES_TTL"],"name":[3],"type":["chr"],"align":["left"]},{"label":["EMP"],"name":[4],"type":["chr"],"align":["left"]},{"label":["ESTAB"],"name":[5],"type":["chr"],"align":["left"]},{"label":["PAYANN"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"00501","2":"ZIP 00501 (Holtsville, NY)","3":"All establishments","4":"0","5":"2","6":"0","_rn_":"1"},{"1":"01001","2":"ZIP 01001 (Agawam, MA)","3":"All establishments","4":"9127","5":"472","6":"376492","_rn_":"2"},{"1":"01002","2":"ZIP 01002 (Amherst, MA)","3":"All establishments","4":"18894","5":"564","6":"472633","_rn_":"3"},{"1":"01007","2":"ZIP 01007 (Belchertown, MA)","3":"All establishments","4":"1989","5":"229","6":"63860","_rn_":"4"},{"1":"01005","2":"ZIP 01005 (Barre, MA)","3":"All establishments","4":"1089","5":"95","6":"34815","_rn_":"5"},{"1":"01003","2":"ZIP 01003 (Amherst, MA)","3":"All establishments","4":"288","5":"21","6":"10461","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-  
-  
-  
+    
 
 
   
