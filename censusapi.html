@@ -436,7 +436,7 @@ div.tocify {
   
 </div>
 <div id="data-import-and-shaping" class="section level1">
-<h1>Data Import and Shaping</h1>
+<h1>Example - Sending Data to Slack</h1>
 <p>We are most interested in the zip code business patterns, so we will focus on that endpoint. Here, we want to be able to get the absolute values from specific years, as well as measure percent changes</p>
 
   
@@ -457,27 +457,24 @@ div.tocify {
   
 </div>
 <div id="shipping-to-datalakedatawarehouse" class="section level1">
-<h1>Shipping to Datalake/DataWarehouse</h1>
+<h1>Scheduling</h1>
 <p>Now that the data is fully built, we will need to send it over to a datalake or for ingestion into the datawarehouse. We’ll cover two options - AWS S3 and Google BigQuery. Fortunately, there are R interfaces for communicating and sharing data between the two. Additionally, the dplyr package can be used to communicate directly with Snowflake (which we use for our DW). Let’s take a look at all three.</p>
 <div id="connecting-to-aws" class="section level2">
-<h2>Connecting to AWS</h2>
+<h2>One-time</h2>
 <p>The CloudyR project provides an R interface for AWS S3. You can see more about this package here: <a href="https://github.com/cloudyr/aws.s3" class="uri">https://github.com/cloudyr/aws.s3</a></p>
 </div>
 <div id="connecting-to-google-bq" class="section level2">
-<h2>Connecting to Google BQ</h2>
+<h2>Based on a condition</h2>
 <p>The R-DBI projects provides an R interface for Google BigQuery. You can see more about this packages here: <a href="https://github.com/r-dbi/bigrquery" class="uri">https://github.com/r-dbi/bigrquery</a></p>
 </div>
 <div id="connecting-to-snowflake" class="section level2">
-<h2>Connecting to Snowflake</h2>
+<h2>Scheduling</h2>
 <p>The Snowflake connector is a bit more complex to install and configure, but also allows the dplyr package to write SQL queries on our behalf. Given that our pipeline is S3 Datalake -&gt; Snowflake -&gt; Looker, this allows us to skip an intermediate step from this initial dataset creation in R.</p>
 <p>You can see the dplyr vignette here: <a href="https://www.snowflake.com/blog/integrating-the-snowflake-data-warehouse-with-r-via-dplyr/" class="uri">https://www.snowflake.com/blog/integrating-the-snowflake-data-warehouse-with-r-via-dplyr/</a></p>
 <p>And their github repo here: <a href="https://github.com/snowflakedb/dplyr-snowflakedb" class="uri">https://github.com/snowflakedb/dplyr-snowflakedb</a></p>
 </div>
 </div>
-<div id="next-steps" class="section level1">
-<h1>Next Steps</h1>
-<p>(next step is to try the Snowflake connector first to create the db table, then push the df_a dataframe into it)</p>
-</div>
+
 
 
 
