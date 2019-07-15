@@ -421,12 +421,12 @@ div.tocify {
   <div class="figure">
 <img src="icons.png" alt="Available Actions" />  
 <br>
-  
+  <br>
 </div>
   
 <div id="exercise" class="section level1">
 <h1>Exercise - Sending Data to Slack</h1>
-<p>We are most interested in the zip code business patterns, so we will focus on that endpoint. Here, we want to be able to get the absolute values from specific years, as well as measure percent changes</p>
+<p>Sending data to Slack is a quick and easy way to alert team members on events they may want to take action on. Data can be sent once, or scheduled based on a time or trigger event.</p>
 <br>
 <div id="prereq" class="section level3">
 <h3>Prerequisites</h3>    
@@ -458,10 +458,12 @@ Create a dashboard with a single visualization on it. Use the Send option to sha
   <br>
   <div id="part2" class="section level3">
 <h3>Part 2 - Scheduling Data</h3>    
+    <p>Create a schedule of a Look that will send a CSV to Slack every afternoon at 1:30 PM which shows the open orders for the day.</p>
  <ol type="1">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
+  <li>Create a Look that you would like to have delivered daily to your team. (This <a href="https://teach.corp.looker.com/explore/ecommerce_data/order_items?qid=cMLVdqIkkoBF8keQnA7aVX&origin_space=8102&toggle=fil">Explore</a> could be a good point to start.)</li>
+  <li>Save and navigate to your Look.</li>
+  <li>Schedule the Look to deliver to Slack daily as a CSV at a reoccuring time. Set this time for 5 minutes from now.</li>
+   <li>Check Slack in 5 minutes.</li>
 </ol> 
   </div>
   
