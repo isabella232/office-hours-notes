@@ -438,6 +438,9 @@ Webhooks are a way that applications can send automated messages or data to othe
   
 <ol type="1">
   <li>Create a free account with <a href="https://zapier.com/">Zapier</a></li>
+  <li>Navigate to the <a href="https://teach.corp.looker.com/spaces/8102">July Office Hours Space</a></li>
+  <li>Copy the Order Confirmation Details Look into your personal space</li>
+  <li>Edit the copied Look, and change the email field and user name to your own email and name. Save the Look</li>
   </ol>
   
 </div>  
@@ -498,11 +501,16 @@ Webhooks are a way that applications can send automated messages or data to othe
   <br>
       <br>
     <br>
+
+   <div id="8" class="section level3">
+  <h3>7. If desired, edit From, From Name, and other fields</h3>
+    <div class="figure">
+<img src="8.png" alt="Step 8" />  </div>  </div> 
   
   <div id="7" class="section level3">
-  <h3>7. Input desired html in the Body, and add specific data points when appropriate using the drop down menu.</h3>
+  <h3>8. Input desired html in the Body, and add specific data points when appropriate using the drop down menu.</h3>
     <p>
-      We've created a sample email template <a href="webhook-email.html" download>here</a>.
+      We've created a sample email template, found below.
     </p>
     <div class="figure">
 <img src="7.png" alt="Step 7" />  </div>
@@ -511,10 +519,479 @@ Webhooks are a way that applications can send automated messages or data to othe
       <br>
     <br>
   
-  <div id="8" class="section level3">
-  <h3>8. If desired, edit From, From Name, and other fields</h3>
-    <div class="figure">
-<img src="8.png" alt="Step 8" />  </div>  </div>
+<pre class="r"><code>
+
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional //EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot;&gt;
+&lt;head&gt;
+&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;o:OfficeDocumentSettings&gt;&lt;o:AllowPNG/&gt;&lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;&lt;/o:OfficeDocumentSettings&gt;&lt;/xml&gt;&lt;![endif]--&gt;
+&lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;/&gt;
+&lt;meta content=&quot;width=device-width&quot; name=&quot;viewport&quot;/&gt;
+&lt;!--[if !mso]&gt;&lt;!--&gt;
+&lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;!--[if !mso]&gt;&lt;!--&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Bitter&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Open+Sans&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		table,
+		td,
+		tr {
+			vertical-align: top;
+			border-collapse: collapse;
+		}
+
+		 b, strong {
+     	color: #134C75;
+     	}
+
+		* {
+			line-height: inherit;
+		}
+
+		a[x-apple-data-detectors=true] {
+			color: inherit !important;
+			text-decoration: none !important;
+		}
+
+		.ie-browser table {
+			table-layout: fixed;
+		}
+
+		[owa] .img-container div,
+		[owa] .img-container button {
+			display: block !important;
+		}
+
+		[owa] .fullwidth button {
+			width: 100% !important;
+		}
+
+		[owa] .block-grid .col {
+			display: table-cell;
+			float: none !important;
+			vertical-align: top;
+		}
+
+		.ie-browser .block-grid,
+		.ie-browser .num12,
+		[owa] .num12,
+		[owa] .block-grid {
+			width: 605px !important;
+		}
+
+		.ie-browser .mixed-two-up .num4,
+		[owa] .mixed-two-up .num4 {
+			width: 200px !important;
+		}
+
+		.ie-browser .mixed-two-up .num8,
+		[owa] .mixed-two-up .num8 {
+			width: 400px !important;
+		}
+
+		.ie-browser .block-grid.two-up .col,
+		[owa] .block-grid.two-up .col {
+			width: 300px !important;
+		}
+
+		.ie-browser .block-grid.three-up .col,
+		[owa] .block-grid.three-up .col {
+			width: 300px !important;
+		}
+
+		.ie-browser .block-grid.four-up .col [owa] .block-grid.four-up .col {
+			width: 150px !important;
+		}
+
+		.ie-browser .block-grid.five-up .col [owa] .block-grid.five-up .col {
+			width: 121px !important;
+		}
+
+		.ie-browser .block-grid.six-up .col,
+		[owa] .block-grid.six-up .col {
+			width: 100px !important;
+		}
+
+		.ie-browser .block-grid.seven-up .col,
+		[owa] .block-grid.seven-up .col {
+			width: 86px !important;
+		}
+
+		.ie-browser .block-grid.eight-up .col,
+		[owa] .block-grid.eight-up .col {
+			width: 75px !important;
+		}
+
+		.ie-browser .block-grid.nine-up .col,
+		[owa] .block-grid.nine-up .col {
+			width: 67px !important;
+		}
+
+		.ie-browser .block-grid.ten-up .col,
+		[owa] .block-grid.ten-up .col {
+			width: 60px !important;
+		}
+
+		.ie-browser .block-grid.eleven-up .col,
+		[owa] .block-grid.eleven-up .col {
+			width: 54px !important;
+		}
+
+		.ie-browser .block-grid.twelve-up .col,
+		[owa] .block-grid.twelve-up .col {
+			width: 50px !important;
+		}
+	&lt;/style&gt;
+&lt;style id=&quot;media-query&quot; type=&quot;text/css&quot;&gt;
+		@media only screen and (min-width: 625px) {
+			.block-grid {
+				width: 605px !important;
+			}
+
+			.block-grid .col {
+				vertical-align: top;
+			}
+
+			.block-grid .col.num12 {
+				width: 605px !important;
+			}
+
+			.block-grid.mixed-two-up .col.num3 {
+				width: 150px !important;
+			}
+
+			.block-grid.mixed-two-up .col.num4 {
+				width: 200px !important;
+			}
+
+			.block-grid.mixed-two-up .col.num8 {
+				width: 400px !important;
+			}
+
+			.block-grid.mixed-two-up .col.num9 {
+				width: 450px !important;
+			}
+
+			.block-grid.two-up .col {
+				width: 302px !important;
+			}
+
+			.block-grid.three-up .col {
+				width: 201px !important;
+			}
+
+			.block-grid.four-up .col {
+				width: 151px !important;
+			}
+
+			.block-grid.five-up .col {
+				width: 121px !important;
+			}
+
+			.block-grid.six-up .col {
+				width: 100px !important;
+			}
+
+			.block-grid.seven-up .col {
+				width: 86px !important;
+			}
+
+			.block-grid.eight-up .col {
+				width: 75px !important;
+			}
+
+			.block-grid.nine-up .col {
+				width: 67px !important;
+			}
+
+			.block-grid.ten-up .col {
+				width: 60px !important;
+			}
+
+			.block-grid.eleven-up .col {
+				width: 55px !important;
+			}
+
+			.block-grid.twelve-up .col {
+				width: 50px !important;
+			}
+		}
+
+		@media (max-width: 625px) {
+
+			.block-grid,
+			.col {
+				min-width: 320px !important;
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.block-grid {
+				width: 100% !important;
+			}
+
+			.col {
+				width: 100% !important;
+			}
+
+			.col&gt;div {
+				margin: 0 auto;
+			}
+
+			img.fullwidth,
+			img.fullwidthOnMobile {
+				max-width: 100% !important;
+			}
+
+			.no-stack .col {
+				min-width: 0 !important;
+				display: table-cell !important;
+			}
+
+			.no-stack.two-up .col {
+				width: 50% !important;
+			}
+
+			.no-stack .col.num4 {
+				width: 33% !important;
+			}
+
+			.no-stack .col.num8 {
+				width: 66% !important;
+			}
+
+			.no-stack .col.num4 {
+				width: 33% !important;
+			}
+
+			.no-stack .col.num3 {
+				width: 25% !important;
+			}
+
+			.no-stack .col.num6 {
+				width: 50% !important;
+			}
+
+			.no-stack .col.num9 {
+				width: 75% !important;
+			}
+
+			.video-block {
+				max-width: none !important;
+			}
+
+			.mobile_hide {
+				min-height: 0px;
+				max-height: 0px;
+				max-width: 0px;
+				display: none;
+				overflow: hidden;
+				font-size: 0px;
+			}
+
+			.desktop_hide {
+				display: block !important;
+				max-height: none !important;
+			}
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;clean-body&quot; style=&quot;margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #FFFFFF;&quot;&gt;
+&lt;!--[if IE]&gt;&lt;div class=&quot;ie-browser&quot;&gt;&lt;![endif]--&gt;
+&lt;table bgcolor=&quot;#FFFFFF&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;nl-container&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; min-width: 320px; Margin: 0 auto; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF; width: 100%;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td style=&quot;word-break: break-word; vertical-align: top; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td align=&quot;center&quot; style=&quot;background-color:#FFFFFF&quot;&gt;&lt;![endif]--&gt;
+&lt;div style=&quot;background-color:#49a6e8;&quot;&gt;
+&lt;div class=&quot;block-grid&quot; data-body-width-father=&quot;605px&quot; rel=&quot;col-num-container-box-father&quot; style=&quot;Margin: 0 auto; min-width: 320px; max-width: 605px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;&quot;&gt;
+&lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color:transparent;&quot;&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background-color:#49a6e8;&quot;&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:605px&quot;&gt;&lt;tr class=&quot;layout-full-width&quot; style=&quot;background-color:transparent&quot;&gt;&lt;![endif]--&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;605&quot; style=&quot;background-color:transparent;width:605px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;&quot; valign=&quot;top&quot;&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;&quot;&gt;&lt;![endif]--&gt;
+&lt;div class=&quot;col num12&quot; data-body-width-son=&quot;605&quot; rel=&quot;col-num-container-box-son&quot; style=&quot;min-width: 320px; max-width: 605px; display: table-cell; vertical-align: top;&quot;&gt;
+&lt;div style=&quot;width:100% !important;&quot;&gt;
+&lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;
+&lt;div style=&quot;border-top:0px solid transparent; border-left:0px solid transparent; border-bottom:0px solid transparent; border-right:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;&quot;&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;divider&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td class=&quot;divider_inner&quot; style=&quot;word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;
+&lt;table align=&quot;center&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;divider_content&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; border-top: 0px solid transparent;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td style=&quot;word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div align=&quot;center&quot; class=&quot;img-container center autowidth&quot; style=&quot;padding-right: 0px;padding-left: 0px;&quot;&gt;
+&lt;!--[if mso]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr style=&quot;line-height:0px&quot;&gt;&lt;td style=&quot;padding-right: 0px;padding-left: 0px;&quot; align=&quot;center&quot;&gt;&lt;![endif]--&gt;&lt;a href=&quot;http://example.com&quot; target=&quot;_blank&quot;&gt; &lt;img align=&quot;center&quot; alt=&quot;Image&quot; border=&quot;0&quot; class=&quot;center autowidth&quot; src=&quot;https://image.flaticon.com/icons/svg/1028/1028537.svg&quot; style=&quot;outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both; height: auto; float: none; border: none; width: 100%; max-width: 150px; display: block;&quot; title=&quot;Image&quot; width=&quot;150&quot;/&gt;&lt;/a&gt;
+&lt;!--[if mso]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;/div&gt;
+&lt;!--[if mso]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-top: 20px; padding-bottom: 10px; font-family: Georgia, 'Times New Roman', serif&quot;&gt;&lt;![endif]--&gt;
+&lt;div style=&quot;color:#FFFFFF;font-family:'Bitter', Georgia, Times, 'Times New Roman', serif;line-height:120%;padding-top:20px;padding-right:10px;padding-bottom:10px;padding-left:10px;&quot;&gt;
+&lt;div style=&quot;font-size: 12px; line-height: 14px; font-family: 'Bitter', Georgia, Times, 'Times New Roman', serif; color: #FFFFFF;&quot;&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 33px; text-align: center; margin: 0;&quot;&gt;&lt;span mce-data-marked=&quot;1&quot; style=&quot;font-size: 28px;&quot;&gt;Fabio's Fabulous Fashions&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if mso]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;!--[if mso]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif&quot;&gt;&lt;![endif]--&gt;
+&lt;div style=&quot;color:#acd6f4;font-family:'Open Sans', Helvetica, Arial, sans-serif;line-height:150%;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;&quot;&gt;
+&lt;div style=&quot;font-size: 12px; line-height: 18px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #acd6f4;&quot;&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 21px; text-align: center; margin: 0;&quot;&gt;&lt;span style=&quot;font-size: 14px; line-height: 21px;&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 12px; line-height: 21px; text-align: center; margin: 0;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if mso]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;
+&lt;/div&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background-color:#f3f3f3;&quot;&gt;
+&lt;div class=&quot;block-grid&quot; data-body-width-father=&quot;605px&quot; rel=&quot;col-num-container-box-father&quot; style=&quot;Margin: 0 auto; min-width: 320px; max-width: 605px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;&quot;&gt;
+&lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color:transparent;&quot;&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background-color:#f3f3f3;&quot;&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:605px&quot;&gt;&lt;tr class=&quot;layout-full-width&quot; style=&quot;background-color:transparent&quot;&gt;&lt;![endif]--&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;605&quot; style=&quot;background-color:transparent;width:605px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;&quot; valign=&quot;top&quot;&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;&quot;&gt;&lt;![endif]--&gt;
+&lt;div class=&quot;col num12&quot; data-body-width-son=&quot;605&quot; rel=&quot;col-num-container-box-son&quot; style=&quot;min-width: 320px; max-width: 605px; display: table-cell; vertical-align: top;&quot;&gt;
+&lt;div style=&quot;width:100% !important;&quot;&gt;
+&lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;
+&lt;div style=&quot;border-top:0px solid transparent; border-left:0px solid transparent; border-bottom:0px solid transparent; border-right:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;&quot;&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;divider&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td class=&quot;divider_inner&quot; style=&quot;word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 25px; padding-right: 25px; padding-bottom: 25px; padding-left: 25px; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;
+&lt;table align=&quot;center&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;divider_content&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; border-top: 0px solid transparent;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td style=&quot;word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;
+&lt;/div&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background-color:#f3f3f3;&quot;&gt;
+&lt;div class=&quot;block-grid&quot; data-body-width-father=&quot;800px&quot; rel=&quot;col-num-container-box-father&quot; style=&quot;Margin: 0 auto; min-width: 320px; max-width: 800px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;&quot;&gt;
+&lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color:transparent;&quot;&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background-color:#f3f3f3;&quot;&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:605px&quot;&gt;&lt;tr class=&quot;layout-full-width&quot; style=&quot;background-color:transparent&quot;&gt;&lt;![endif]--&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;605&quot; style=&quot;background-color:transparent;width:605px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;&quot; valign=&quot;top&quot;&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;&quot;&gt;&lt;![endif]--&gt;
+&lt;div class=&quot;col num12&quot; data-body-width-son=&quot;605&quot; rel=&quot;col-num-container-box-son&quot; style=&quot;min-width: 320px; max-width: 800px; display: table-cell; vertical-align: top;&quot;&gt;
+&lt;div style=&quot;width:100% !important;&quot;&gt;
+&lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;
+&lt;div style=&quot;border-top:0px solid transparent; border-left:0px solid transparent; border-bottom:0px solid transparent; border-right:0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;&quot;&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;!--[if mso]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Georgia, 'Times New Roman', serif&quot;&gt;&lt;![endif]--&gt;
+&lt;div style=&quot;color:#134C75;font-family:'Bitter', Georgia, Times, 'Times New Roman', serif;line-height:120%;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;&quot;&gt;
+&lt;div style=&quot;font-size: 12px; line-height: 14px; font-family: 'Bitter', Georgia, Times, 'Times New Roman', serif; color: #134C75;&quot;&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 16px; margin: 0;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 28px; line-height: 33px;&quot;&gt;Thank you for your purchase!&lt;/span&gt;&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if mso]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;!--[if mso]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif&quot;&gt;&lt;![endif]--&gt;
+&lt;div style=&quot;color:#555555;font-family:'Open Sans', Helvetica, Arial, sans-serif;line-height:150%;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;&quot;&gt;
+&lt;div style=&quot;font-size: 12px; line-height: 18px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #555555;&quot;&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 21px; margin: 0;&quot;&gt;We're so happy you choose Fabio's Fabulous Fashions for your stylish threads! We hope you had a pleasant experience and are getting excited about your sweet new duds. Here is a summary of your purchase.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if mso]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;divider&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td class=&quot;divider_inner&quot; style=&quot;word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 30px; padding-right: 10px; padding-bottom: 30px; padding-left: 10px; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;
+&lt;table align=&quot;center&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;divider_content&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; border-top: 1px solid #DDDDDD;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td style=&quot;word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!--[if mso]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif&quot;&gt;&lt;![endif]--&gt;
+&lt;div style=&quot;color:#555555;font-family:'Bitter', Georgia, Times, 'Times New Roman', sans-serif;line-height:180%;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;&quot;&gt;
+&lt;div style=&quot;font-size: 12px; line-height: 41px; font-family: 'Bitter', Georgia, Times, 'Times New Roman', sans-serif; color: #555555;&quot;&gt;
+&lt;p style=&quot;font-size: 28px; line-height: 45px; margin: 0;&quot;&gt;
+
+	&lt;b&gt;Date: &lt;/b&gt;
+	&lt;br/&gt;&lt;b&gt;Item: &lt;/b&gt;
+	&lt;br/&gt;&lt;b&gt;Brand: &lt;/b&gt;
+	&lt;br/&gt;&lt;b&gt;Price:  &lt;/b&gt;
+
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if mso]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;divider&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td class=&quot;divider_inner&quot; style=&quot;word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 25px; padding-right: 25px; padding-bottom: 25px; padding-left: 25px; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;
+&lt;table align=&quot;center&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;divider_content&quot; role=&quot;presentation&quot; style=&quot;table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; border-top: 0px solid transparent;&quot; valign=&quot;top&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;&gt;
+&lt;td style=&quot;word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse;&quot; valign=&quot;top&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;
+&lt;/div&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!--[if (IE)]&gt;&lt;/div&gt;&lt;![endif]--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre></code>
+  
+  
   <br>
   
   
